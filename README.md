@@ -8,7 +8,7 @@
     "username": "Rahul",
     "email": "Rahul@gmail.com",
     "password": "Rahul@123",
-    "age": 24
+    "age": 24 // Optional
   }
   ```
 
