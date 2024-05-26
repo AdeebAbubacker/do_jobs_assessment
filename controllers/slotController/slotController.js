@@ -5,8 +5,6 @@ const createSlot = async (req, res) => {
     const { startTime, endTime, users } = req.body;
     const start = new Date(startTime);
     const end = new Date(endTime);
-
-    // Check for existing slots that overlap with the new slot
     const overlappingSlots = await Slot.find({
       users: { $in: users },
       $or: [
@@ -15,13 +13,9 @@ const createSlot = async (req, res) => {
         { startTime: { $eq: start }, endTime: { $eq: end } }
       ]
     });
-
-    // If overlapping slots exist, return error
     if (overlappingSlots.length > 0) {
       return res.status(400).json({ error: 'Slot conflict detected for one or more users' });
     }
-
-    // Create and save the new slot
     const slot = new Slot(req.body);
     await slot.save();
     res.status(201).json(slot);
