@@ -46,15 +46,15 @@ app.listen(3000, () => {
 //   "users": [<UserId>]
 // }
 
-// 3. List Users in a group?
+// 4. List Users in a group?
 //method : GET
 // endpoint : http://localhost:3000/api/groups/users?groupId=<GroupId>
 
-// 4. List Whole Users?
+// 5. List Whole Users?
 //method : GET
 // endpoint : http://localhost:3000/api/groups/users
 
-// 5. Create slot with slot name , date , starttime?
+// 6. Create slot with slot name , date , starttime?
 // endpoint : http://localhost:3000/api/slots
 //method : POST
 //body : {
@@ -65,7 +65,7 @@ app.listen(3000, () => {
 //   "users": [<UserId>] // Array of user IDs (optional)
 // }
 
-//6. List Whole slots in our system ?
+//7. List Whole slots in our system ?
 
 //endpoint : http://localhost:3000/api/slots
 //method : GET
