@@ -1,7 +1,7 @@
 const User = require('../../models/user.js');
 
 const createUser = async (req, res) => {
-try {
+  try {
     const existingUser = await User.aggregate([
       { $match: { email: req.body.email } },
       { $limit: 1 }
@@ -30,6 +30,6 @@ const getAllUsers = async (req, res) => {
 
 
 module.exports = {
-  createUser,getAllUsers
+  createUser, getAllUsers
 };
 

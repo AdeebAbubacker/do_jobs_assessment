@@ -11,7 +11,7 @@ const createGroup = async (req, res) => {
         { $match: { _id: { $in: groupData.users.map(userId => new mongoose.Types.ObjectId(userId)) } } },
         { $group: { _id: null, count: { $sum: 1 } } }
       ]);
-      
+
       if (userAggregation.length === 0 || userAggregation[0].count !== groupData.users.length) {
         return res.status(400).json({ error: 'One or more user IDs are invalid' });
       }
@@ -35,7 +35,7 @@ const addUsersToGroup = async (req, res) => {
     if (!group) {
       return res.status(404).json({ error: 'Group not found' });
     }
-    const usersToAdd = req.body.users; 
+    const usersToAdd = req.body.users;
     if (!Array.isArray(usersToAdd) || usersToAdd.length === 0) {
       return res.status(400).json({ error: 'Users must be provided as a non-empty array' });
     }
@@ -65,7 +65,8 @@ const getUsersFromGroup = async (req, res) => {
     if (groupId) {
       const groupAggregation = await Group.aggregate([
         { $match: { _id: new mongoose.Types.ObjectId(groupId) } },
-        { $lookup: {
+        {
+          $lookup: {
             from: 'users',
             localField: 'users',
             foreignField: '_id',
