@@ -1,7 +1,7 @@
 # Assessment Task APIs
 
 ## 1. Add User with user info
-- **Endpoint**: `POST /api/users`
+- **Endpoint**: `POST http://localhost:3000/api/users`
 - **Body**:
   ```json
   {
@@ -13,7 +13,7 @@
   ```
 
 ## 2. Add User Group
-- **Endpoint**: `POST /api/groups`
+- **Endpoint**: `POST http://localhost:3000/api/groups`
 - **Body**:
   ```json
   {
@@ -23,7 +23,7 @@
   ```
 
 ## 3. Add Users to Group
-- **Endpoint**: `PUT /api/groups/<GroupId>/users`
+- **Endpoint**: `PUT http://localhost:3000/api/groups/<GroupId>/users`
 - **Body**:
   ```json
   {
@@ -33,14 +33,14 @@
 
 ## 4. List Users in a group
 - **Method**: `GET`
-- **Endpoint**: `GET /api/groups/users?groupId=<GroupId>`
+- **Endpoint**: `GET http://localhost:3000/api/groups/users?groupId=<GroupId>`
 
 ## 5. List Whole Users
 - **Method**: `GET`
-- **Endpoint**: `GET /api/groups/users`
+- **Endpoint**: `GET http://localhost:3000/api/groups/users`
 
 ## 6. Create slot with slot name, date, starttime
-- **Endpoint**: `POST /api/slots`
+- **Endpoint**: `POST http://localhost:3000/api/slots`
 - **Body**:
   ```json
   {
@@ -54,4 +54,4 @@
 
 ## 7. List Whole slots in our system
 - **Method**: `GET`
-- **Endpoint**: `GET /api/slots`
+- **Endpoint**: `GET http://localhost:3000/api/slots`
