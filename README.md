@@ -12,7 +12,10 @@
   }
   ```
 
-## 2. Add User Group
+  ## 2. Get all users
+- **Endpoint**: `GET http://localhost:3000/api/users`
+
+## 3. Add User Group
 - **Endpoint**: `POST http://localhost:3000/api/groups`
 - **Body**:
   ```json
@@ -22,7 +25,7 @@
   }
   ```
 
-## 3. Add Users to Group
+## 4. Add Users to Group
 - **Endpoint**: `PUT http://localhost:3000/api/groups/<GroupId>/users`
 - **Body**:
   ```json
@@ -31,13 +34,10 @@
   }
   ```
 
-## 4. List Users in a group
+## 5. List Users in a group
 - **Method**: `GET`
 - **Endpoint**: `GET http://localhost:3000/api/groups/users?groupId=<GroupId>`
 
-## 5. List Whole Users
-- **Method**: `GET`
-- **Endpoint**: `GET http://localhost:3000/api/groups/users`
 
 ## 6. Create slot with slot name, date, starttime
 - **Endpoint**: `POST http://localhost:3000/api/slots`
