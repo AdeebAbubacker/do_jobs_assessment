@@ -4,8 +4,8 @@ const slotController = require('../../controllers/slotController/slotController.
 const slotRoutes  = express.Router();
 
 
-slotRoutes .post('/slots', slotController.createSlot);
-slotRoutes .get('/slots', slotController.getSlots);
+slotRoutes.post('/slots', slotController.createSlot);
+slotRoutes.get('/slots', slotController.getSlots);
 
 
 module.exports = slotRoutes;
