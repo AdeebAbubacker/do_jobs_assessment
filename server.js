@@ -13,7 +13,7 @@ app.use('/api', userRoutes);
 app.use('/api', slotRoutes); 
 app.use('/api', groupRoutes); 
 
-app.listen(3001, () => {
+app.listen(3000, () => {
   console.log('Server listening on port 3000');
 });
 

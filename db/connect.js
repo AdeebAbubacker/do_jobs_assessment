@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 
 
 const connectDB = async () => {
-  const localConnectionString = "mongodb://127.0.0.1:27017/Sample";
+  const localConnectionString = "mongodb://127.0.0.1:27017/DoJobs";
 
   try {
     await mongoose.connect(localConnectionString, {
